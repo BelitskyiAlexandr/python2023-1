@@ -1,13 +1,13 @@
 
-def print_list_with_dot_and_comma(list):
-    print(*list, sep='; ')
+def print_list_with_dot_and_comma(worked_list):
+    print(*worked_list, sep='; ')
 
 
 input_string = input("Enter a list element separated by space ")
-list = input_string.split()
+worked_list = input_string.split()
 
-if not list:
+if not worked_list:
     print('List is empty')
 else :
-    print_list_with_dot_and_comma(list)
+    print_list_with_dot_and_comma(worked_list)
 
