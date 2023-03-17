@@ -11,11 +11,6 @@ def transform_strlist_to_intlist(list_with_values):
     int_list = [eval(i) for i in list_with_values]
     return int_list
 
-
-list_with_values = [1, 2, 5]
-print(list_into_lists_by_numbers(list_with_values))
-
-
 input_string = input("Enter a list element separated by space ")
 list_with_values = input_string.split()
 
