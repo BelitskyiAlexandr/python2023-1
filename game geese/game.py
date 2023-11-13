@@ -95,6 +95,7 @@ while playing:
         main_display.blit(enemy[0], enemy[1])
         if player_rect.colliderect(enemy[1]):
             #main_display.blit(font.render(f"You lost. Your score: {score}", True, (255,255,255)), (WIDTH//2, HEIGHT//2))
+            print(f"Your score: {score}")
             playing = False
 
     #Bonus-process
