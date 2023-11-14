@@ -5,6 +5,7 @@ class StudentInfoApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Лабораторна робота 2")
+        self.root.geometry("600x400")
 
         # Додати елементи до вікна
         self.label_student_info = tk.Label(root, text="Беліцький Олександр КП-01\nПЗКС \nКПІ")
@@ -104,7 +105,7 @@ class StudentInfoApp:
 
     
     def process_string(self):
-        input_string = self.entry_sentence1.get()
+        input_string = self.entry_sentence3.get()
         result_string = self.replace_products(input_string)
         messagebox.showinfo("Результат", f"Результат обробки: {result_string}")
 
