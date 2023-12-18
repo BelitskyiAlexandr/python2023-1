@@ -104,7 +104,7 @@ tf_idf_values_for_plot = list(tf_idf_result.values())
 
 # diagram sett
 plt.figure(figsize=(10, 6))
-plt.bar(words_for_plot, tf_idf_values_for_plot, color='skyblue')
+plt.bar(words_for_plot, tf_idf_values_for_plot, color='green')
 plt.ylabel('TF-IDF Value')
 plt.title('TF-IDF Measure for Each Word')
 plt.xticks(rotation=45, ha='right')  # Повертає підписи слов на 45 градусів
@@ -112,3 +112,36 @@ plt.grid(axis='y')
 
 
 plt.show()
+
+
+
+print('----------\n\nTask6')
+from nltk.corpus import gutenberg
+from nltk.probability import FreqDist
+
+nltk.download('gutenberg')
+hamlet_text = gutenberg.raw('shakespeare-hamlet.txt')
+
+words = word_tokenize(hamlet_text)
+
+target_words = ['Hamlet', 'King', 'Queen', 'Ophelia']
+
+# frequency analisys
+freq_dist = FreqDist(words)
+
+# every word count
+word_counts = [freq_dist[word] for word in target_words]
+
+
+plt.bar(target_words, word_counts, color='green')
+plt.xlabel('Words')
+plt.ylabel('Frequency')
+plt.title('Distribution of words')
+plt.show()
+
+
+unique_tokens = set(words)
+num_unique_tokens = len(unique_tokens)
+
+
+print("Uniq tokens", num_unique_tokens)
