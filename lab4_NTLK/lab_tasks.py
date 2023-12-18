@@ -145,3 +145,27 @@ num_unique_tokens = len(unique_tokens)
 
 
 print("Uniq tokens", num_unique_tokens)
+
+
+
+print('----------\n\nTask7')
+
+# uniq tokens
+unique_words = [word for word, count in FreqDist(words).items() if count == 1]
+print("Uniq words:", unique_words)
+
+# word`s length
+word_lengths = [len(word) for word in words]
+
+# mode
+most_common_length = FreqDist(word_lengths).max()
+
+
+plt.hist(word_lengths, bins=range(min(word_lengths), min(17, max(word_lengths)) + 1), edgecolor='black', color='green')
+plt.xlabel('Words` length')
+plt.ylabel('Frequency')
+plt.title('Distribution of words')
+plt.show()
+
+# Виведення найчастіше зустрічається довжини слів
+print(f"Mode of words` length: {most_common_length}")
