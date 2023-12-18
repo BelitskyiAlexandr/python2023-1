@@ -93,3 +93,22 @@ tf_idf_result = tf_idf_mesure(tf_result, idf_result)
 print("TF-IDF static mesure:")
 for word, tf_idf_value in tf_idf_result.items():
     print(f"{word}: {tf_idf_value:.3f}")
+
+
+print('----------\n\nTask5')
+import matplotlib.pyplot as plt
+
+# legend
+words_for_plot = list(tf_idf_result.keys())
+tf_idf_values_for_plot = list(tf_idf_result.values())
+
+# diagram sett
+plt.figure(figsize=(10, 6))
+plt.bar(words_for_plot, tf_idf_values_for_plot, color='skyblue')
+plt.ylabel('TF-IDF Value')
+plt.title('TF-IDF Measure for Each Word')
+plt.xticks(rotation=45, ha='right')  # Повертає підписи слов на 45 градусів
+plt.grid(axis='y')
+
+
+plt.show()
