@@ -22,10 +22,9 @@ def extended_euclidean_algorithm(a, b):
     while v != 0:
         q = round(u / v)
         t1 = u - q * v
-        t2 = A - q * C
         t3 = B - q * D
         
-        u, A, B, v, C, D = v, C, D, t1, t2, t3
+        u, B, v, D = v, D, t1, t3
     
     d, x, y = u, A, B
     
