@@ -8,12 +8,12 @@ def get_inverse_matrix(matrix, modulus):
     #det_inv = pow(det, -1, modulus)
     det_inv = extended_euclidean_algorithm(modulus, det)
 
-    print(det, '; ', det_inv)
-    print(matrix)
+    #print(det, '; ', det_inv)
+    #print(matrix)
     
     inverse_matrix = det_inv * np.round(det * np.linalg.inv(matrix)).astype(int) % modulus
 
-    print(inverse_matrix)
+    #print(inverse_matrix)
     return inverse_matrix
 
 def extended_euclidean_algorithm(a, b):
